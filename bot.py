@@ -2,6 +2,7 @@ import ccxt
 import time
 import random
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, MessageHandler, Filters, CallbackContext
+from telegram.ext.filters import Filters
 
 # Ваш токен телеграм-бота
 telegram_bot_token = "6659955061:AAF-BsLyqbImLtb4oK3KSf3vcvcW7V5zatY"
