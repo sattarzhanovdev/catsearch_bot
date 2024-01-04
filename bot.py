@@ -1,8 +1,7 @@
 import ccxt
 import time
 import random
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, MessageHandler, Filters, CallbackContext
-from telegram.ext.filters import Filters
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
 # Ваш токен телеграм-бота
 telegram_bot_token = "6659955061:AAF-BsLyqbImLtb4oK3KSf3vcvcW7V5zatY"
@@ -62,6 +61,8 @@ def get_prices(update: Update, context: CallbackContext) -> None:
 
   update.message.reply_text(response)
   update.message.reply_text("Ажиев вышел!")
+  time.sleep(5)
+  update.message.reply_text("Ажиев кайра отуруп калды!")
 
 
 

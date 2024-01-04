@@ -1,5 +1,4 @@
 import ccxt
-import random
 
 # Ваши токены и ключи API для каждой биржи
 binance_api_key = 'AuZSjtXy2Ij7QiBEGZojT6kFu8qLQSQrroiYHUKgOUR96EfuBsxNY3ssJFxLJr14'
