@@ -14,7 +14,7 @@ okex_api_secret = '3F86EABDD2D920F231B923CEAA89A80C'
 # Инициализация клиентов бирж
 binance_exchange = ccxt.binance({'apiKey': binance_api_key, 'secret': binance_api_secret})
 bybit_exchange = ccxt.bybit({'apiKey': bybit_api_key, 'secret': bybit_api_secret})
-okex_exchange = ccxt.okex3({'apiKey': okex_api_key, 'secret': okex_api_secret})
+okex_exchange = ccxt.okx({'apiKey': okex_api_key, 'secret': okex_api_secret})
 
 def get_binance_markets():
     return [market['symbol'] for market in binance_exchange.fetch_markets()]
