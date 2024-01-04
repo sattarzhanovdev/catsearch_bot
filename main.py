@@ -5,9 +5,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    # Call your script function and return the result
-    result = bot.main()
-    return jsonify(result)
+  result = bot.main()
+  return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+  app.run(debug=True)
