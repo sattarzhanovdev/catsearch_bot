@@ -18,17 +18,13 @@ from exchange_utils import binance_exchange, bybit_exchange, okex_exchange, get_
 
 
 def start(update: Update, context: CallbackContext) -> None:
-  update.message.reply_text('Привет, на связи Даниел Ажиев!\nКоманды:\n/price название монеты - чтобы узнать цену монеты,например: /price btc/usdt\n/all - все монеты')
+  update.message.reply_text('Привет, я кот-бот CatSearch!\nКоманды:\n/price название монеты - чтобы узнать цену монеты,например: /price btc/usdt\n/all - все монеты')
 
 
 def get_prices(update: Update, context: CallbackContext) -> None:
   symbol = context.args[0].upper()
 
-  update.message.reply_text("Подождите пока Ажиев выйдет из тюрьмы...")
-
-  time.sleep(5)
-
-  update.message.reply_text("Дал 500 000$ не отпускает...")
+  update.message.reply_text("Секундочку...")
 
   # Получение цен и изменения цены за последние 24 часа с каждой биржи
   binance_ticker = binance_exchange.fetch_ticker(symbol)
@@ -60,9 +56,6 @@ def get_prices(update: Update, context: CallbackContext) -> None:
   
 
   update.message.reply_text(response)
-  update.message.reply_text("Ажиев вышел!")
-  time.sleep(5)
-  update.message.reply_text("Ажиев кайра отуруп калды!")
 
 
 
@@ -155,5 +148,5 @@ def main():
     updater.start_polling()
     updater.idle()
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
