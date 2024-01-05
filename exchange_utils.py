@@ -10,10 +10,14 @@ bybit_api_secret = 'I3fL8LJBgn0eo2xdEoQXwQEAygUAcW7QJ85E'
 okex_api_key = '807b990b-152a-483a-a0a4-0fd534404517'
 okex_api_secret = '3F86EABDD2D920F231B923CEAA89A80C'
 
+# gateio_api_key = '807b990b-152a-483a-a0a4-0fd534404517'
+# gateio_api_secret = '3F86EABDD2D920F231B923CEAA89A80C'
+
 # Инициализация клиентов бирж
 binance_exchange = ccxt.binance({'apiKey': binance_api_key, 'secret': binance_api_secret})
 bybit_exchange = ccxt.bybit({'apiKey': bybit_api_key, 'secret': bybit_api_secret})
 okex_exchange = ccxt.okx({'apiKey': okex_api_key, 'secret': okex_api_secret})
+# gateIo_exchange = ccxt.gateio({'apiKey': okex_api_key, 'secret': okex_api_secret})
 
 def get_binance_markets():
     return [market['symbol'] for market in binance_exchange.fetch_markets()]
